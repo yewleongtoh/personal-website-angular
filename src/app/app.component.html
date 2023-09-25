@@ -1,28 +1,155 @@
-<svg id="background" width='1728' height='1235' viewBox="0 0 1728 1235" fill='none' xmlns='http://www.w3.org/2000/svg'><g opacity='0.75' filter='url(#filter0_f_39_143)'><circle cy='1000' r='264' fill='url(#paint0_linear_39_143)'/></g><g opacity='0.65' filter='url(#filter1_f_39_143)'><circle cx='1720' cy='264' r='379' fill='url(#paint1_linear_39_143)'/></g><defs><filter id='filter0_f_39_143' x='-485' y='515' width='970' height='970' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'><feFlood flood-opacity='0' result='BackgroundImageFix'/><feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/><feGaussianBlur stdDeviation='110.5' result='effect1_foregroundBlur_39_143'/></filter><filter id='filter1_f_39_143' x='1120' y='-336' width='1200' height='1200' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'><feFlood flood-opacity='0' result='BackgroundImageFix'/><feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/><feGaussianBlur stdDeviation='110.5' result='effect1_foregroundBlur_39_143'/></filter><linearGradient id='paint0_linear_39_143' x1='196.5' y1='902' x2='-2.55853e-05' y2='1264' gradientUnits='userSpaceOnUse'><stop stop-color="var(--bttm-left-blur-1)"/><stop offset='1' stop-color="var(--bttm-left-blur-2)"/></linearGradient><linearGradient id='paint1_linear_39_143' x1='1720' y1='-115' x2='1720' y2='643' gradientUnits='userSpaceOnUse'><stop stop-color="var(--top-right-blur-1)"/><stop offset='1' stop-color="var(--top-right-blur-2)" /></linearGradient></defs></svg>     
-<div id="content">
-  <div class="header">
-    <h1>Quickstart Template</h1>
-    <div class="logo">
-      <img src="https://user-images.githubusercontent.com/43764894/223549637-2715c89d-a44e-42e0-8f6c-fa6246279658.png">
-    </div>
-    <h2>
-      This is a bare-bones Angular project that has everything you need to quickly deploy it to Netlify
-    </h2>
-    <div class="bttns">
-      <a href="https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/angular-quickstart" class="bttn primary">Deploy to Netlify</a>
-      <a href="https://github.com/netlify-templates/angular-quickstart" class="bttn secondary">View Repo</a>
+<div id="header">
+  <div class="container">
+      <nav>
+        <img src="assets/images/logo.png" class="logo">
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fas" (click)="closemenu()"><fa-icon [icon]="faTimes"></fa-icon></i>
+        </ul>
+        <i class="fas" (click)="openmenu()"><fa-icon [icon]="faBars"></fa-icon></i>
+        
+      </nav>
+      <div class="header-text">
+        <p>Data Scientist</p>
+        <h1>Hi, I'm <span>Yew Leong</span><br>From Malaysia</h1>
+      </div>
+  </div>
+</div>
+<!-- ------------------about----------------------- -->
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="assets/images/user.png">
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>With a background in data science and a diverse experience working for prestigious organizations such as Petronas (Malaysia National Oil and Gas Company) and Orsted (World Leader in Renewable Energy), I have honed my expertise in integrated planning and scheduling optimization. My journey in the field of data science has been both exhilarating and fulfilling.</p>
+        <p>As part of the integrated planning and scheduling optimization team, I have been involved in several transformative projects utilizing cutting-edge <b>machine learning</b> techniques, <b>customized simulations</b>, and <b>optimization modeling</b>. These projects have enabled us to enhance operational efficiency, reduce costs, and optimize resource allocation for complex processes.</p>
+        <p>Outside my professional engagements, my passion for continuous learning has led me to delve into personal projects focused on <b>computer vision</b> applications, <b>natural language processing (NLP)</b>, and frontend development. My free time is dedicated to exploring new horizons and staying updated with the latest advancements in these areas.</p>
+        <p>Having accumulated multiple years of experience in the field, I am driven by the desire to solve real-world challenges and drive meaningful change through data-driven insights. As I look ahead, I am excited to continue my journey of exploration and innovation, contributing to the transformative potential of data science in shaping a sustainable and prosperous future.</p>
+      
+        <div class="tab-titles">
+          <p class="tab-links active-link" (click)="opentab('skills', $event)">Skills</p>
+          <p class="tab-links" (click)="opentab('experience', $event)">Experience</p>
+          <p class="tab-links" (click)="opentab('education', $event)">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>Machine Learning</span><br>Develop Supervised/Unsupervised Machine Learning</li>
+            <li><span>Simulation</span><br>Simulate What-If Scenario Under Uncertainty</li>
+            <li><span>Optimization</span><br>Perform Network Optimization/MILP</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2022 - Current</span><br>Data Scientist at Orsted</li>
+            <li><span>2018 - 2022</span><br>Data Scientist at PETRONAS</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2019</span><br>Data Science Academy from ActiveLab, India</li>
+            <li><span>2018</span><br>Electrical & Electronic Engineering from PETRONAS, University of Technology, Malaysia</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="resource-list">
-    <ul>
-      <li>
-        <a href="https://www.netlify.com/tags/angular/">Netlify Blog: Angular posts</a>
-      <li>
-        <a href="https://docs.netlify.com/">Netlify Docs</a>
-      </li>
-      <li>
-        <a href="https://angular.io/">Angular Docs</a>
-      </li>
-    </ul>
+</div>
+
+<!-- ------------------services----------------------- -->
+<div id="services">
+  <div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+      <div>
+        <fa-icon [icon]="faCode"></fa-icon>
+        <h2>Machine Learning</h2>
+        <p>Perform supervised and unsupervised machine learning to forecast based on historical data.</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div>
+        <fa-icon [icon]="faCropAlt"></fa-icon>
+        <h2>Simulation</h2>
+        <p>Develop What-if scenario analysis with monte-carlo simulation, sensitivity analysis, to curb with uncertainty.</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div>
+        <fa-icon [icon]="faNetworkWired"></fa-icon>
+        <h2>Optimization</h2>
+        <p>Perform Mixed Integer Linear Programming or Network Optimization on scheduling of activities.</p>
+        <a href="#">Learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ------------------portfolio----------------------- -->
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">MyWork</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="assets/images/work-1.png">
+        <div class="layer">
+          <h3>City Traffic Simulation</h3>
+          <p>The model simulates and optimizes the traffic flow in Kuala Lumpur City Center (KLCC).</p>
+          <a href="#"><fa-icon [icon]="faExternalLinkAlt"></fa-icon></a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="assets/images/work-2.png">
+        <div class="layer">
+          <h3>Covid-19 Simulation</h3>
+          <p>A SIR (Susceptible, Infected & Recovered) Model with primal goals of providing scenario analysis in order to validate a some key actions outlined by WHO in managing pandemics: Social Distancing, Travel Restriction and Quarantine Suspected Cases.</p>
+          <a href="#"><fa-icon [icon]="faExternalLinkAlt"></fa-icon></a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="assets/images/work-3.png">
+        <div class="layer">
+          <h3>Credit Survival Risk</h3>
+          <p>Credit-Survival-Risk is a project aimed at building a credit risk analytic model using the statistical method of Survival Analysis. Survival analysis is a popular analytical methodology used to investigate the expected duration of time until an event of interest occurs.</p>
+          <a href="#"><fa-icon [icon]="faExternalLinkAlt"></fa-icon></a>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn">See more</a>
+  </div>
+</div>
+
+<!-- ------------------contact----------------------- -->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><fa-icon [icon]="faPaperPlane"></fa-icon>yewleongtoh@hotmail.com</p>
+        <div class="social-icons">
+          <a href="https://facebook.com"><fa-icon [icon]="faFacebook"></fa-icon></a>
+          <a href="#"><fa-icon [icon]="faTwitter"></fa-icon></a>
+          <a href="#"><fa-icon [icon]="faInstagram"></fa-icon></a>
+          <a href="https://www.linkedin.com/in/yew-leong-toh-04210975/"><fa-icon [icon]="faLinkedin"></fa-icon></a>
+          <a href="https://github.com/yewleongtoh"><fa-icon [icon]="faGithub"></fa-icon></a>
+        </div>
+        <a href="assets/images/my-cv.pdf" download class="btn btn2">Download CV</a>
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input formControlName="email" name="email" type="email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright © Yew Leong.</p>
   </div>
 </div>
